@@ -11,7 +11,7 @@ class PrimerParcial2021 {
 
 	@Test
 	void queSePuedaCrearUnaPelicula() {
-		// Preparación
+		// Preparaciï¿½n
 		final Integer CODIGO_ESPERADO = 1;
 		final String DESCRIPCION_ESPERADA = "Exterminators II";
 		final Genero GENERO_ESPERADO = Genero.ACCION;
@@ -20,12 +20,12 @@ class PrimerParcial2021 {
 		final String ACTOR_1_ESPERADO = "Guillermo Francella";
 		final String ACTOR_2_ESPERADO = "Emilio Disi";
 		
-		// Ejecución
+		// Ejecuciï¿½n
 		Pelicula pelicula = new Pelicula(CODIGO_ESPERADO, DESCRIPCION_ESPERADA, GENERO_ESPERADO, ANO_DE_ESTRENO_ESPERADO, DIRECTOR_ESPERADO);
 		pelicula.agregarActor(ACTOR_1_ESPERADO);
 		pelicula.agregarActor(ACTOR_2_ESPERADO);
 		
-		// Validación
+		// Validaciï¿½n
 		assertEquals(CODIGO_ESPERADO, pelicula.getCodigo());
 		assertEquals(DESCRIPCION_ESPERADA, pelicula.getDescripcion());
 		assertEquals(GENERO_ESPERADO, pelicula.getGenero());
@@ -34,57 +34,58 @@ class PrimerParcial2021 {
 		assertTrue(pelicula.actua(ACTOR_1_ESPERADO));
 		
 	}
-	
+	@Test
 	void queSePuedaCrearUnVideojuego() {
-		// Preparación
+		// Preparaciï¿½n
 		final Integer CODIGO_ESPERADO = 1;
 		final String DESCRIPCION_ESPERADA = "Fornite";
 		final TipoDeConsola CONSOLA_ESPERADA = TipoDeConsola.PLAY_STATION;
 		
-		// Ejecución
+		// Ejecuciï¿½n
 		Videojuego juego = new Videojuego(CODIGO_ESPERADO, DESCRIPCION_ESPERADA, CONSOLA_ESPERADA);
 		
-		// Validación
+		// Validaciï¿½n
 		assertEquals(CODIGO_ESPERADO, juego.getCodigo());
-		assertEquals(DESCRIPCION_ESPERADA, juego.getCodigo());
+		assertEquals(DESCRIPCION_ESPERADA, juego.getDescripcion());
 		assertEquals(CONSOLA_ESPERADA, juego.getTipo());
 		
 	}
 	
+	@Test
 	void queSePuedaCrearUnLibro() {
-		// Preparación
+		// Preparaciï¿½n
 		final Integer CODIGO_ESPERADO = 1;
 		final String DESCRIPCION_ESPERADA = "Fifty Shades of Grey";
 		final String AUTOR_ESPERADO = "E. L. James";
 		final String EDITORIAL_ESPERADA = "Vintage Books";
 		
-		// Ejecución
+		// Ejecuciï¿½n
 		Libro libro = new Libro(CODIGO_ESPERADO, DESCRIPCION_ESPERADA, AUTOR_ESPERADO, EDITORIAL_ESPERADA);
 		
-		// Validación
+		// Validaciï¿½n
 		assertEquals(CODIGO_ESPERADO, libro.getCodigo());
-		assertEquals(DESCRIPCION_ESPERADA, libro.getCodigo());
+		assertEquals(DESCRIPCION_ESPERADA, libro.getDescripcion());
 		assertEquals(AUTOR_ESPERADO, libro.getAutor());
 		assertEquals(EDITORIAL_ESPERADA, libro.getEditorial());
 		
 	}
-	
+	@Test
 	void queSePuedaCrearUnComestible() {
-		// Preparación
+		// Preparaciï¿½n
 		final Integer CODIGO_ESPERADO = 1;
 		final String DESCRIPCION_ESPERADA = "Chomps";
 		
-		// Ejecución
+		// Ejecuciï¿½n
 		Comestible comestible = new Comestible(CODIGO_ESPERADO, DESCRIPCION_ESPERADA);
 		
-		// Validación
+		// Validaciï¿½n
 		assertEquals(CODIGO_ESPERADO, comestible.getCodigo());
-		assertEquals(DESCRIPCION_ESPERADA, comestible.getCodigo());
+		assertEquals(DESCRIPCION_ESPERADA, comestible.getDescripcion());
 	}
 	
 	@Test
 	void queUnaPeliculaSeaVendible() {
-		// Preparación
+		// Preparaciï¿½n
 		final Integer CODIGO_ESPERADO = 1;
 		final String DESCRIPCION_ESPERADA = "Exterminators II";
 		final Genero GENERO_ESPERADO = Genero.ACCION;
@@ -92,43 +93,43 @@ class PrimerParcial2021 {
 		final String DIRECTOR_ESPERADO = "Carlos Galettini";
 		final Double PRECIO_VENTA = 5000.0;
 		
-		// Ejecución
+		// Ejecuciï¿½n
 		Vendible pelicula = new Pelicula(CODIGO_ESPERADO, DESCRIPCION_ESPERADA, GENERO_ESPERADO, ANO_DE_ESTRENO_ESPERADO, DIRECTOR_ESPERADO);
 		pelicula.setPrecioVenta(PRECIO_VENTA);
 		
-		// Validación
+		// Validaciï¿½n
 		assertEquals(PRECIO_VENTA, pelicula.getPrecioVenta());		
 	}
 
 	@Test
 	void queUnJuegoSeaAlquilable() {
-		// Preparación
+		// Preparaciï¿½n
 		final Integer CODIGO_ESPERADO = 1;
 		final String DESCRIPCION_ESPERADA = "Fornite";
 		final TipoDeConsola CONSOLA_ESPERADA = TipoDeConsola.PLAY_STATION;
 		final Double PRECIO_ALQUILER = 500.0;
 		
-		// Ejecución
+		// Ejecuciï¿½n
 		Alquilable juego = new Videojuego(CODIGO_ESPERADO, DESCRIPCION_ESPERADA, CONSOLA_ESPERADA);
 		juego.setPrecioAlquiler(PRECIO_ALQUILER);
 		
 		
-		// Validación
+		// Validaciï¿½n
 		assertEquals(PRECIO_ALQUILER, juego.getPrecioAlquiler());		
 	}
 
 	@Test
 	void queSePuedaCrearUnCliente() {
-		// Preparación
+		// Preparaciï¿½n
 		final Integer CODIGO_ESPERADO = 1;
 		final String NOMBRE_ESPERADO = "Camila";
 		final String APELLIDO_ESPERADO = "Oculto";
 		final Integer EDAD_ESPERADA = 23;
 		
-		// Ejecución
+		// Ejecuciï¿½n
 		Cliente nuevoCliente = new Cliente(CODIGO_ESPERADO, APELLIDO_ESPERADO, NOMBRE_ESPERADO, EDAD_ESPERADA);
 		
-		// Validación
+		// Validaciï¿½n
 		assertEquals(CODIGO_ESPERADO, nuevoCliente.getCodigo());
 		assertEquals(NOMBRE_ESPERADO, nuevoCliente.getNombre());
 		assertEquals(APELLIDO_ESPERADO, nuevoCliente.getApellido());
@@ -138,12 +139,13 @@ class PrimerParcial2021 {
 
 	@Test
 	void queSePuedaVenderUnLibro() {
-		// Preparación
+		// Preparaciï¿½n
 		final Integer CODIGO_ESPERADO = 1;
 		final String DESCRIPCION_ESPERADA = "Fifty Shades of Grey";
 		final String AUTOR_ESPERADO = "E. L. James";
 		final String EDITORIAL_ESPERADA = "Vintage Books";
 		final String NOMBRE_VIDEOCLUB = "Blockbuster";
+		@SuppressWarnings("unused")
 		final Integer CODIGO_CLIENTE_ESPERADO = 1;
 		final String NOMBRE_ESPERADO = "Camila";
 		final String APELLIDO_ESPERADO = "Privado";
@@ -151,14 +153,14 @@ class PrimerParcial2021 {
 		final Estado ESTADO_INICIAL_ESPERADO = Estado.DISPONIBLE;
 		final Estado ESTADO_FINAL_ESPERADO = Estado.VENDIDO;
 		
-		// Ejecución
+		// Ejecuciï¿½n
 		Videoclub video = new Videoclub(NOMBRE_VIDEOCLUB);
 		Producto nuevoProducto = new Libro(CODIGO_ESPERADO, DESCRIPCION_ESPERADA, AUTOR_ESPERADO, EDITORIAL_ESPERADA);
 		Cliente nuevoCliente = new Cliente(CODIGO_ESPERADO, APELLIDO_ESPERADO, NOMBRE_ESPERADO, EDAD_ESPERADA);
 		
 		video.agregarProducto(nuevoProducto);
 		
-		// Validación
+		// Validaciï¿½n
 		assertEquals(ESTADO_INICIAL_ESPERADO, video.buscarProducto(nuevoProducto).getEstadoActual());
 		assertTrue(video.vender(nuevoProducto, nuevoCliente));
 		assertEquals(NOMBRE_ESPERADO, video.buscarProducto(nuevoProducto).getQuienPoseeElProducto().getNombre());
@@ -167,14 +169,16 @@ class PrimerParcial2021 {
 	
 	@Test
 	void queSePuedaAlquilarUnaPelicula() {
-		// Preparación
+		// Preparaciï¿½n
 		final Integer CODIGO_ESPERADO = 1;
 		final String DESCRIPCION_ESPERADA = "El Cisne Negro";
 		final Genero GENERO_ESPERADO = Genero.SUSPENSO;
 		final Integer ANO_DE_ESTRENO_ESPERADO = 2010;
 		final String DIRECTOR_ESPERADO = "Darren Aronofsky";
+		@SuppressWarnings("unused")
 		final String ACTOR_1_ESPERADO = "Natalie Portman";
 		final String NOMBRE_VIDEOCLUB = "Blockbuster";
+		@SuppressWarnings("unused")
 		final Integer CODIGO_CLIENTE_ESPERADO = 1;
 		final String NOMBRE_ESPERADO = "Camila";
 		final String APELLIDO_ESPERADO = "Privado";
@@ -182,14 +186,14 @@ class PrimerParcial2021 {
 		final Estado ESTADO_INICIAL_ESPERADO = Estado.DISPONIBLE;
 		final Estado ESTADO_FINAL_ESPERADO = Estado.ALQUILADO;
 		
-		// Ejecución
+		// Ejecuciï¿½n
 		Videoclub video = new Videoclub(NOMBRE_VIDEOCLUB);
 		Producto nuevoProducto = new Pelicula(CODIGO_ESPERADO, DESCRIPCION_ESPERADA, GENERO_ESPERADO, ANO_DE_ESTRENO_ESPERADO, DIRECTOR_ESPERADO);
 		Cliente nuevoCliente = new Cliente(CODIGO_ESPERADO, APELLIDO_ESPERADO, NOMBRE_ESPERADO, EDAD_ESPERADA);		
 		
 		video.agregarProducto(nuevoProducto);
 		
-		// Validación
+		// Validaciï¿½n
 		assertEquals(ESTADO_INICIAL_ESPERADO, video.buscarProducto(nuevoProducto).getEstadoActual());
 		assertTrue(video.alquilar(nuevoProducto, nuevoCliente));
 		assertEquals(NOMBRE_ESPERADO, video.buscarProducto(nuevoProducto).getQuienPoseeElProducto().getNombre());
@@ -198,38 +202,123 @@ class PrimerParcial2021 {
 	
 	@Test
 	void queSeNoSePuedaVenderUnComestibleVendido() {
-		// Preparación
+		// Preparaciï¿½n
+		final Integer CODIGO_PRODUCTO_ESPERADO = 1;
+		final String DESCRIPCION_ESPERADA = "ComestibleX";
+		final String NOMBRE_VIDEOCLUB = "VideoClubX";
+		final Integer CODIGO_CLIENTE_ESPERADO = 2;
+		final String APELLIDO_ESPERADO = "Gonzalez";
+		final String NOMBRE_ESPERADO = "Ignacio";
+		final Integer EDAD_ESPERADA = 29;
+		final Estado ESTADO_INICIAL_ESPERADO = Estado.DISPONIBLE;
+		final Estado ESTADO_FINAL_ESPERADO = Estado.VENDIDO;
 		
-		// Ejecución
+		// Ejecuciï¿½n
+		Comestible comestible = new Comestible(CODIGO_PRODUCTO_ESPERADO, DESCRIPCION_ESPERADA);
+		Videoclub video = new Videoclub(NOMBRE_VIDEOCLUB);
+		Cliente cliente = new Cliente(CODIGO_CLIENTE_ESPERADO, APELLIDO_ESPERADO, NOMBRE_ESPERADO, EDAD_ESPERADA);	
 		
-		// Validación
+		video.agregarProducto(comestible);
+		
+		// Validaciï¿½n
+		assertEquals(ESTADO_INICIAL_ESPERADO , video.buscarProducto(comestible).getEstadoActual());
+		assertTrue(video.vender(comestible, cliente));
+		assertEquals(NOMBRE_ESPERADO, video.buscarProducto(comestible).getQuienPoseeElProducto().getNombre());
+		assertEquals(ESTADO_FINAL_ESPERADO, video.buscarProducto(comestible).getEstadoActual());
 	}
 	
 	@Test
 	void queSeNoSePuedaAlquilarUnJuegoAlquilado() {
-		// Preparación
+		// Preparaciï¿½n
+		final Integer CODIGO_ESPERADO = 1;
+		final String DESCRIPCION_ESPERADA = "Fornite";
+		final TipoDeConsola CONSOLA_ESPERADA = TipoDeConsola.PLAY_STATION;
+		final Double PRECIO_ALQUILER = 500.0;
+		final Integer CODIGO_CLIENTE_ESPERADO = 2;
+		final String APELLIDO_ESPERADO = "Gonzalez";
+		final String NOMBRE_ESPERADO = "Ignacio";
+		final Integer CODIGO_CLIENTE_ESPERADO_2 = 3;
+		final String APELLIDO_ESPERADO_2 = "Perez";
+		final String NOMBRE_ESPERADO_2 = "Hernan";
+		final Integer EDAD_ESPERADA = 29;
+		final Integer EDAD_ESPERADA_2 = 30;
 		
-		// Ejecución
+		// Ejecuciï¿½n
+		Alquilable juego = new Videojuego(CODIGO_ESPERADO, DESCRIPCION_ESPERADA, CONSOLA_ESPERADA);
+		final String NOMBRE_VIDEOCLUB = "VideoClubX";
+		Videoclub video = new Videoclub(NOMBRE_VIDEOCLUB);
+		Cliente cliente1 = new Cliente(CODIGO_CLIENTE_ESPERADO, APELLIDO_ESPERADO, NOMBRE_ESPERADO, EDAD_ESPERADA);
+		juego.setPrecioAlquiler(PRECIO_ALQUILER);
+		Cliente cliente2 = new Cliente(CODIGO_CLIENTE_ESPERADO_2, APELLIDO_ESPERADO_2, NOMBRE_ESPERADO_2, EDAD_ESPERADA_2);
+		juego.setPrecioAlquiler(PRECIO_ALQUILER);
+		video.agregarProducto(juego);
 		
-		// Validación
+		// Validaciï¿½n
+		assertTrue(video.alquilar(juego, cliente1));
+		assertFalse(video.alquilar(juego, cliente2));
+		assertTrue(video.buscarProducto(juego).getQuienPoseeElProducto().equals(cliente1));
 	}
 	
 	@Test
 	void queLuegoDeDevueltaUnaPeliculaSePuedaAlquilar() {
-		// Preparación
+		// Preparaciï¿½n
+		final Integer CODIGO_ESPERADO = 1;
+		final String DESCRIPCION_ESPERADA = "El Cisne Negro";
+		final Genero GENERO_ESPERADO = Genero.SUSPENSO;
+		final Integer ANO_DE_ESTRENO_ESPERADO = 2010;
+		final String DIRECTOR_ESPERADO = "Darren Aronofsky";
+		final String NOMBRE_VIDEOCLUB = "Blockbuster";
+		final Integer CODIGO_CLIENTE_ESPERADO = 1;
+		final String NOMBRE_ESPERADO = "Camila";
+		final String APELLIDO_ESPERADO = "Privado";
+		final Integer EDAD_ESPERADA = 23;
+		final Integer CODIGO_CLIENTE_ESPERADO_2 = 2;
+		final String NOMBRE_ESPERADO_2 = "Carlos";
+		final String APELLIDO_ESPERADO_2 = "Privado";
+		final Integer EDAD_ESPERADA_2 = 24;
 		
-		// Ejecución
+		// Ejecuciï¿½n
+		Videoclub video = new Videoclub(NOMBRE_VIDEOCLUB);
+		Producto nuevoProducto = new Pelicula(CODIGO_ESPERADO, DESCRIPCION_ESPERADA, GENERO_ESPERADO, ANO_DE_ESTRENO_ESPERADO, DIRECTOR_ESPERADO);
+		Cliente nuevoCliente = new Cliente(CODIGO_CLIENTE_ESPERADO, APELLIDO_ESPERADO, NOMBRE_ESPERADO, EDAD_ESPERADA);	
+		Cliente nuevoCliente_2 = new Cliente(CODIGO_CLIENTE_ESPERADO_2, APELLIDO_ESPERADO_2, NOMBRE_ESPERADO_2, EDAD_ESPERADA_2);	
 		
-		// Validación
+		video.agregarProducto(nuevoProducto);
+		
+		// Validaciï¿½n
+		assertTrue(video.alquilar(nuevoProducto, nuevoCliente));
+		assertFalse(video.alquilar(nuevoProducto, nuevoCliente_2));
+		assertTrue(video.buscarProducto(nuevoProducto).getEstadoActual().equals(Estado.ALQUILADO));
+		assertTrue(video.recibirAlquiler(nuevoProducto, nuevoCliente));
+		assertTrue(video.buscarProducto(nuevoProducto).getEstadoActual().equals(Estado.DISPONIBLE));
+		assertTrue(video.alquilar(nuevoProducto, nuevoCliente));
+		assertTrue(video.buscarProducto(nuevoProducto).getEstadoActual().equals(Estado.ALQUILADO));
 	}
 	
 	@Test
 	void queSeNoSePuedaAlquilarUnPeliculaAUnMenor() {
-		// Preparación
+		// Preparaciï¿½n
+		final Integer CODIGO_ESPERADO = 1;
+		final String DESCRIPCION_ESPERADA = "El Cisne Negro";
+		final Genero GENERO_ESPERADO = Genero.SUSPENSO;
+		final Integer ANO_DE_ESTRENO_ESPERADO = 2010;
+		final String DIRECTOR_ESPERADO = "Darren Aronofsky";
+		final String NOMBRE_VIDEOCLUB = "Blockbuster";
+		final Integer CODIGO_CLIENTE_ESPERADO = 1;
+		final String NOMBRE_ESPERADO = "Camila";
+		final String APELLIDO_ESPERADO = "Privado";
+		final Integer EDAD_ESPERADA = 15;
 		
-		// Ejecución
+		// Ejecuciï¿½n
+		Videoclub video = new Videoclub(NOMBRE_VIDEOCLUB);
+		Producto nuevoProducto = new Pelicula(CODIGO_ESPERADO, DESCRIPCION_ESPERADA, GENERO_ESPERADO, ANO_DE_ESTRENO_ESPERADO, DIRECTOR_ESPERADO);
+		Cliente nuevoCliente = new Cliente(CODIGO_CLIENTE_ESPERADO, APELLIDO_ESPERADO, NOMBRE_ESPERADO, EDAD_ESPERADA);	
 		
-		// Validación
+		video.agregarProducto(nuevoProducto);
+		
+		// Validaciï¿½n
+		assertFalse(video.alquilar(nuevoProducto, nuevoCliente));
+		assertTrue(video.buscarProducto(nuevoProducto).getEstadoActual().equals(Estado.DISPONIBLE));
 	}
 	
 }
